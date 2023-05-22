@@ -48,7 +48,98 @@ body {font-size:16px;}
   </div>
   <h2> 3D Virtual Environment with some scanned objects </h2>
   <iframe src="https://try.reach.love/browse/hcarmen/421b25e0-f8c3-11ed-b936-f7c0fdcbedb7?transition=embed&transition_image=https://s3-us-west-1.amazonaws.com/awsproduction-us-west-1-s3-reach/user-1550/custom/thumbnails/automated-project-5660.png?user_id=1550&rnd=0.1468966222666277" width="800" height="600"/>
-<!-- End page content -->
+&nbsp;
+  <h2> 360 Pano </h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>T.S. Philly Night #2 </title>
+
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+<a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
+
+<!-- canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="801" height="937" style=""></canvas -->
+
+<a-entity camera="" position="" wasd-controls="" rotation="" look-controls="" aframe-injected=""></a-entity>
+
+<div class="a-enter-vr" aframe-injected=""><button class="a-enter-vr-button" title="Enter VR mode with a headset or fullscreen mode on a desktop. Visit https://webvr.rocks or https://webvr.info for more information." aframe-injected=""></button></div>
+
+<div class="a-enter-ar a-hidden" aframe-injected=""><button class="a-enter-ar-button" title="Enter AR mode with a headset or handheld device. Visit https://webvr.rocks or https://webvr.info for more information." aframe-injected=""></button></div>
+
+<div class="a-orientation-modal a-hidden" aframe-injected=""><button aframe-injected="">Exit VR</button></div>
+
+<a-entity light="" data-aframe-default-light="" aframe-injected=""></a-entity>
+
+<a-entity light="color: #faebeb; intensity: 2; type: point"></a-entity>
+
+<a-entity cursor="rayOrigin:mouse"></a-entity>
+
+
+
+<script>
+  AFRAME.registerComponent("weblink", {
+    schema: {
+      url: {
+        default: ""
+      }
+    },
+    init: function() {
+      this.el.addEventListener("click", (e) => {
+        window.location = this.data.url;
+      })
+    }
+  })
+</script>
+  
+  <!-- Ground -->
+
+  <a-plane position="0.78094 -4.41441 7.80055" rotation="270 0 0" width="100" height="100" color="#8c8282" material="" geometry="" id="floor"></a-plane>
+
+  <!-- Ceiling -->
+
+  <a-plane position="0 34 9.75" rotation="90 0 0" width="100" height="100" color="#8c8282" material="" geometry="side: double" id="ceiling"></a-plane>  
+
+  <a-entity geometry="primitive: cylinder; height: 50; segmentsHeight: 20; radius: 50" material="src:https://halliecarmen.github.io/IMG_7643.JPG; color: #ada8a8; roughness: 1; side: double" position="-2.62931 11.09131 10">
+  </a-entity>
+  
+  
+<!-- Change position, text and weblink for each hotspot and photo. !-->
+<!-- Duplicate a snippet below for additional hotspots, then customize them. -->
+<!-- -->
+<!-- BLOCK PLACEMENT -->
+<!-- X is right positive, left negative  -->
+<!-- Y is up negative, down negative  -->
+<!-- Z is toward you positive, away from you negative  -->
+<!-- -->
+<!-- BLOCK ROTATION-->
+<!-- X is tumbles toward or away from you.  -->
+<!-- Y spins like a top.  -->
+<!-- Z spins like a fan with blades facing you -->
+<!-- -->
+
+  <a-circle position="0, -2.6, 13" rotation="-70 180 0" width="20" height="20" radius="2" weblink="url:https://halliecarmen.github.io/IMG_7643.JPG">
+    <a-entity geometry="primitive: circle; height: 2; segmentsHeight: 2; radius: 2" material="src: arrow.png; roughness: 1; side: double" position="0.025 -0.073 0.060">
+    </a-entity>
+  </a-circle>
+
+  <a-circle position="0, -2.6, -13" rotation="60 180 0" width="20" height="10" radius="2" weblink="url:https://halliecarmen.github.io/IMG_7643.JPG">
+    <a-entity geometry="primitive: circle; height: 2; segmentsHeight: 2; radius: 2" material="src: arrow.png; roughness: 1; side: double" position="0.025 -0.073 0.060">
+    </a-entity>
+  </a-circle>
+</a-scene>
+</body>
+</html>
+  
+  
+  <!-- End page content -->
 </div>
 
 <!-- W3.CSS Container -->
